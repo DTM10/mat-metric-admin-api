@@ -1,21 +1,10 @@
-```txt
-npm install
-npm run dev
-```
+# MatMetric Admin API
 
-```txt
-npm run deploy
-```
+Placeholder Hono worker for future admin-only endpoints. Part of the
+`mat-metric-master` pnpm workspace; install from the workspace root.
 
-[For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
-
-```txt
-npm run cf-typegen
-```
-
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
-
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>()
+```sh
+pnpm install                       # from the workspace root
+pnpm --dir apps/admin-api dev
+pnpm --dir apps/admin-api deploy
 ```
